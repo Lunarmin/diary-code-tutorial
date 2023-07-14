@@ -15,37 +15,37 @@
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-engine</artifactId>
-            <version>7.0.0.GA</version>
+            <version>7.1.0.M2</version>
         </dependency>
 
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-spring</artifactId>
-            <version>7.0.0.GA</version>
+            <version>7.1.0.M2</version>
         </dependency>
 
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-bpmn-model</artifactId>
-            <version>7.0.0.GA</version>
+            <version>7.1.0.M2</version>
         </dependency>
 
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-bpmn-converter</artifactId>
-            <version>7.0.0.GA</version>
+            <version>7.1.0.M2</version>
         </dependency>
 
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-json-converter</artifactId>
-            <version>7.0.0.GA</version>
+            <version>7.1.0.M2</version>
         </dependency>
 
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-bpmn-layout</artifactId>
-            <version>7.0.0.GA</version>
+            <version>7.1.0.M2</version>
         </dependency>
         
         <dependency>

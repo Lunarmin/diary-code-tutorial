@@ -26,7 +26,7 @@ public class PrintOutStream {
 
     public static void print() throws Exception {
         PrintStream printStream =
-                new PrintStream(new FileOutputStream("D:\\TempData\\file\\print.txt"),true, StandardCharsets.UTF_8);
+                new PrintStream(new FileOutputStream("D:\\TempData\\file\\print.txt"),true);
 
         printStream.println(97);//写出 + 自动刷新 + 自动换行
 

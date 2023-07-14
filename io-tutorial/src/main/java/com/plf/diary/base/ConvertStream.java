@@ -27,7 +27,7 @@ public class ConvertStream {
 
     public static void reader() throws Exception {
         FileReader fileReader =
-                new FileReader("D:\\TempData\\file\\1.txt", Charset.forName("GBK"));
+                new FileReader("D:\\TempData\\file\\1.txt");
 
         int ch;
 
@@ -39,7 +39,7 @@ public class ConvertStream {
     }
 
     public static void writer() throws Exception {
-        FileWriter fileWriter = new FileWriter("D:\\TempData\\file\\1.txt",Charset.forName("GBK"));
+        FileWriter fileWriter = new FileWriter("D:\\TempData\\file\\1.txt");
         fileWriter.write("你好你好");
 
         fileWriter.close();
@@ -47,9 +47,9 @@ public class ConvertStream {
 
     public static void readerWrite() throws Exception {
         FileReader fileReader =
-                new FileReader("D:\\TempData\\file\\1.txt", Charset.forName("GBK"));
+                new FileReader("D:\\TempData\\file\\1.txt");
 
-        FileWriter fileWriter = new FileWriter("D:\\TempData\\file\\1.txt",Charset.forName("GBK"));
+        FileWriter fileWriter = new FileWriter("D:\\TempData\\file\\1.txt");
 
 
         int b;

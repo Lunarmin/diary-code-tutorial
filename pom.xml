@@ -11,15 +11,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 
     <modules>
         <module>io-tutorial</module>
-        <module>akka-tutorial</module>
-        <module>vertx-tutorial</module>
         <module>rabbitmq-tutorial</module>
         <module>zookeeper-tutorial</module>
         <module>spring-security-tutorial</module>
@@ -28,7 +26,6 @@
         <module>flowable-tutorial</module>
         <module>hadoop-tutorial</module>
         <module>elasticsearch-tutorial</module>
-        <module>java11-tutorial</module>
         <module>nacos-tutorial</module>
         <module>quartz-tutorial</module>
     </modules>
