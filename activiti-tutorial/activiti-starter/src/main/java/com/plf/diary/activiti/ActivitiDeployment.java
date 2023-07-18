@@ -1,9 +1,6 @@
 package com.plf.diary.activiti;
 
-import org.activiti.bpmn.model.BpmnModel;
-import org.activiti.bpmn.model.ExtensionElement;
-import org.activiti.bpmn.model.FlowElement;
-import org.activiti.bpmn.model.UserTask;
+import org.activiti.bpmn.model.*;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.ProcessEngines;
@@ -16,6 +13,7 @@ import org.springframework.util.CollectionUtils;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.zip.ZipInputStream;
 
 /**
@@ -155,6 +153,14 @@ public class ActivitiDeployment {
                         System.out.println(fieldType);
                     }
                 }
+            }else if(flowElement instanceof ExclusiveGateway){
+                ExclusiveGateway exclusiveGateway = (ExclusiveGateway)flowElement;
+                Map<String, List<ExtensionAttribute>> attributes = exclusiveGateway.getAttributes();
+                System.out.println(attributes);
+            }else if(flowElement instanceof ParallelGateway){
+
+            }else if(flowElement instanceof EventGateway){
+
             }
             //System.out.println(flowElement.getAttributes());
         }
