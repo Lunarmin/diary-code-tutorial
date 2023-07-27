@@ -6,10 +6,12 @@ import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.repository.Deployment;
-import org.activiti.engine.repository.ProcessDefinition;
 import org.junit.Test;
 import org.springframework.util.CollectionUtils;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
@@ -124,7 +126,7 @@ public class ActivitiDeployment {
     }
 
     @Test
-    public void test03(){
+    public void test03() {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 
         RepositoryService repositoryService = processEngine.getRepositoryService();
@@ -134,7 +136,7 @@ public class ActivitiDeployment {
 
         Collection<FlowElement> flowElements = bpmnModel.getProcesses().get(0).getFlowElements();
 
-        for(FlowElement flowElement:flowElements){
+        for (FlowElement flowElement : flowElements) {
             if (flowElement instanceof UserTask) {
                 UserTask userTask = (UserTask) flowElement;
                 // 分配到任务的人
@@ -143,7 +145,7 @@ public class ActivitiDeployment {
                 //System.out.println(userTask.getFormKey());
 
                 List<ExtensionElement> extensionElements = userTask.getExtensionElements().get("fields");
-                if(!CollectionUtils.isEmpty(extensionElements)) {
+                if (!CollectionUtils.isEmpty(extensionElements)) {
                     // 处理需要传递的字段信息
                     for (ExtensionElement extensionElement : extensionElements) {
                         String fieldName = extensionElement.getAttributeValue(null, "fieldName");
@@ -153,13 +155,13 @@ public class ActivitiDeployment {
                         System.out.println(fieldType);
                     }
                 }
-            }else if(flowElement instanceof ExclusiveGateway){
-                ExclusiveGateway exclusiveGateway = (ExclusiveGateway)flowElement;
+            } else if (flowElement instanceof ExclusiveGateway) {
+                ExclusiveGateway exclusiveGateway = (ExclusiveGateway) flowElement;
                 Map<String, List<ExtensionAttribute>> attributes = exclusiveGateway.getAttributes();
                 System.out.println(attributes);
-            }else if(flowElement instanceof ParallelGateway){
+            } else if (flowElement instanceof ParallelGateway) {
 
-            }else if(flowElement instanceof EventGateway){
+            } else if (flowElement instanceof EventGateway) {
 
             }
             //System.out.println(flowElement.getAttributes());
