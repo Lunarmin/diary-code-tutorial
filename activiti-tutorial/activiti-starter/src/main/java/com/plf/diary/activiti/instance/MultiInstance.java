@@ -55,7 +55,7 @@ public class MultiInstance {
         param.put("starter","a");
         param.put("streetLink","b1");
         param.put("isVillageTask",false);
-
+        param.put("projectId",1);
         ProcessInstance processInstance = runtimeService
                 .startProcessInstanceByKey("data-capture",param);
         //4、输出实例的相关信息
@@ -91,6 +91,7 @@ public class MultiInstance {
                System.out.println("任务ID："+task.getId());
                System.out.println("任务负责人："+task.getAssignee());
                System.out.println("任务名称："+task.getName());
+               System.out.println(taskService.getVariable(task.getId(),"projectId"));
            });
         }
     }
